@@ -1,0 +1,10 @@
+*.pyc
+*~*
+__pychache__
+*.download
+*.bsp
+*.dat
+*.h5
+*.tmp
+bin/
+*egg-info/
