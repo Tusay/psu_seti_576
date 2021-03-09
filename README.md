@@ -18,13 +18,11 @@ git clone git@github.com:Tusay/psu_seti_576.git
 4. Activate the correct Anaconda environment:
     * For use on ACI:
     ```bash
-    source /gpfs/group/jtw13/default/anaconda3/bin/activate
-    conda activate seti_aci
+    source /gpfs/group/jtw13/default/aci_anaconda/bin/activate
     ```
     * For use on CyberLamp (e.g., with GPU)
     ```bash
-    source /gpfs/group/jtw13/default/anaconda3/bin/activate
-    conda activate seti_gpu
+    source /gpfs/group/jtw13/default/gpu_anaconda/bin/activate
     ```
 
 ## Updating turbo_seti

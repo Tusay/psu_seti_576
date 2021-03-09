@@ -77,7 +77,7 @@ import pandas as pd
 import turbo_seti
 import blimpy as bp
 from subprocess import call
-from drift_rate import get_drift_rate
+from seti_lens import get_drift_rate
 # from input_Tabby import indir, clobber, MDR, SNR
 from turbo_seti.find_doppler.find_doppler import FindDoppler
 from turbo_seti.find_event.find_event_pipeline import find_event_pipeline
