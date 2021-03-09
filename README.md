@@ -1,9 +1,10 @@
 ## Getting started
 
 0. Make sure you have access to ACI:
-   * https://www.icds.psu.edu/computing-services/account-setup/
+   * Follow the account setup procedure [here](https://www.icds.psu.edu/computing-services/account-setup/)
 
-1. Get access to ```/gpfs/group/jtw13/default```
+1. Make sure you access to ```/gpfs/group/jtw13/default```
+    * You can email [Jason Wright](astrowright@gmail.com) to be added
 
 2. Set up an SSH key for GitHub (if you haven't already):
    * Follow the Linux directions [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
