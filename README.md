@@ -1,4 +1,4 @@
-## Installation
+## Getting started
 
 0. Make sure you have access to ACI:
    * https://www.icds.psu.edu/computing-services/account-setup/
@@ -17,4 +17,13 @@ git clone git@github.com:Tusay/psu_seti_576.git
 4. Activate the correct Anaconda environment:
 ```bash
 source /gpfs/group/jtw13/default/anaconda3/bin/activate
+```
+
+## Updating turbo_seti
+
+```bash
+cd /gpfs/group/jtw13/default/turbo_seti/
+git pull
+cd ..
+pip install ./turbo_seti
 ```
