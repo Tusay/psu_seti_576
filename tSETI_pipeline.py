@@ -371,9 +371,6 @@ def main():
     fil_list = find_input_data(indir, '.fil')
     # write .fil files to .lst file for plot_event_pipeline later
     lst_fil = outdir + "fil_files.lst"
-
-    pdb.set_trace()
-
     # purge any existing fil_files.lst before creating the new one
     if os.path.isfile(lst_fil):
         os.remove(lst_fil)
