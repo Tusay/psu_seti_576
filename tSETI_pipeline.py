@@ -390,8 +390,6 @@ def main():
         print(f"\nWorking on file number %s in the list..." %(fil_list.index(fil)+1))
         h5_file = convert_to_h5(fil, indir=indir)
 
-        pdb.set_trace()
-
         # Get max drift rate
         print("\nGetting max drift rate based on target coordinates...\n")
         drift_rate = get_drift_rate(h5_file)
@@ -420,6 +418,8 @@ def main():
             print('\nCulling complete.')
         else:
             min_drift_factor=0
+
+        pdb.set_trace()
 
     max_max_drift_rate=max(drifts) * max_drift_factor
     min_min_drift_rate=min(drifts) * min_drift_factor
