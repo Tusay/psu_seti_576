@@ -22,6 +22,8 @@ git clone git@github.com:Tusay/psu_seti_576.git
     ```
     * For use on CyberLamp (e.g., with GPU)
     ```bash
+    export PATH=/usr/local/cuda-9.1/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
     source /gpfs/group/jtw13/default/gpu_anaconda/bin/activate
     ```
 
