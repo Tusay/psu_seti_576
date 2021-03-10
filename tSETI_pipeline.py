@@ -397,22 +397,19 @@ def main():
         fil_array.append(get_file_id(fil))
         print(f"\nBarycentric drift rate (pre factor) is {drift_rate:.2f}")
         max_drift_rate = drift_rate * max_drift_factor
-        min_drift_rate = drift_rate * min_drift_factor                                              # currently broken in find_doppler so doing workaround
+        min_drift_rate = drift_rate * min_drift_factor
         print(f"Using a drift rate range between {min_drift_rate:.2f} and {max_drift_rate:.2f}.")
-        # move h5 file to output folder temporarily
-        # mv_h5_out = 'mv ' + os.path.basename(h5_file) + " " + outdir
-        # call([mv_h5_out],shell=True)
-        # call FindDoppler
+
+        # run turbo_seti
         datfile = run_turbo_seti(h5_file,
                                  min_snr=min_SNR,
                                  outdir=outdir,
                                  clobber=clobber,
                                  max_drift=max_drift_rate,
-                                 gpu_backend=gpu_backend)
-        # move h5 file back to input folder
-        # mv_h5_in = 'mv ' + outdir + os.path.basename(h5_file) + " " + indir
-        # call([mv_h5_in],shell=True)
-        # apply minimum drift rate filter to dat files if indicated
+                                 gpu_backend=gpu_backend,
+                                 clobber=clobber)
+
+        # workaround for broken min drift rate
         if min_drift_rate:
             cull_dats(datfile=datfile,min_drift=min_drift_rate)
             print('\nCulling complete.')
@@ -421,6 +418,7 @@ def main():
 
         pdb.set_trace()
 
+    # multiply drift rates by factor and print
     max_max_drift_rate=max(drifts) * max_drift_factor
     min_min_drift_rate=min(drifts) * min_drift_factor
     print(f'\nAll hits within drift rate range of {min_min_drift_rate:.4f} and {max_max_drift_rate:.4f} Hz/s.')
