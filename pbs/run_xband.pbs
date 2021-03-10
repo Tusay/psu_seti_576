@@ -4,7 +4,6 @@
 #PBS -l pmem=16gb
 #PBS -l walltime=12:00:00
 #PBS -j oe
-#PBS -M mlp95@psu.edu
 #PBS -N xband_test
 
 echo "Starting job $PBS_JOBNAME"
