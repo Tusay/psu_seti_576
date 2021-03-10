@@ -401,6 +401,7 @@ def main():
         print(f"Using a drift rate range between {min_drift_rate:.2f} and {max_drift_rate:.2f}.")
 
         # run turbo_seti
+        start = time.time()
         datfile = run_turbo_seti(h5_file,
                                  min_snr=min_SNR,
                                  outdir=outdir,
@@ -408,6 +409,9 @@ def main():
                                  max_drift=max_drift_rate,
                                  gpu_backend=gpu_backend,
                                  clobber=clobber)
+        end = time.time()
+        print(end - start)
+        print('\n')
 
         # workaround for broken min drift rate
         if min_drift_rate:
