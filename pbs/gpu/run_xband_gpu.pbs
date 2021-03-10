@@ -16,6 +16,6 @@ echo "About to change into $PBS_O_WORKDIR"
 cd $PBS_O_WORKDIR
 echo "About to start Python"
 source activate seti
-python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -GPU
+python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -clobber -GPU
 echo "Python exited"
 date

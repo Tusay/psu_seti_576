@@ -407,8 +407,7 @@ def main():
                                  outdir=outdir,
                                  clobber=clobber,
                                  max_drift=max_drift_rate,
-                                 gpu_backend=gpu_backend,
-                                 clobber=clobber)
+                                 gpu_backend=gpu_backend)
         end = time.time()
         print(end - start)
         print('\n')
