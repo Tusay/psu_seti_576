@@ -13,8 +13,8 @@ echo "Job id: $PBS_JOBID"
 echo "About to change into $PBS_O_WORKDIR"
 cd $PBS_O_WORKDIR
 echo "About to start Python"
-export PATH=/usr/local/cuda-9.1/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-10.2/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
 source /gpfs/group/jtw13/default/gpu_anaconda/bin/activate
 python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -clobber -GPU
 echo "Python exited"
