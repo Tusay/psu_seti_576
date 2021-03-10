@@ -124,10 +124,8 @@ def parse_args():
         if indir[-1] != "/":
             indir += "/"
         odict["indir"] = indir
-
-    pdb.set_trace()
     if odict["out"]:
-        out = odict["out"][0]
+        out = odict["out"]
         if out[-1] != "/":
             out += "/"
         if out[0] == "/":
