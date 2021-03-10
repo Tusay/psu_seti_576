@@ -14,6 +14,6 @@ echo "About to change into $PBS_O_WORKDIR"
 cd $PBS_O_WORKDIR
 echo "About to start Python"
 source /gpfs/group/jtw13/default/aci_anaconda/bin/activate
-python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -clobber
+python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -out "ptest_aci/" -clobber
 echo "Python exited"
 date

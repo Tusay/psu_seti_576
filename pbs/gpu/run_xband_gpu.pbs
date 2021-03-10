@@ -16,6 +16,6 @@ echo "About to start Python"
 export PATH=/usr/local/cuda-10.2/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
 source /gpfs/group/jtw13/default/gpu_anaconda/bin/activate
-python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -out ptest/ -clobber -GPU
+python tSETI_pipeline.py /gpfs/group/jtw13/default/gbt_2020/x_band/AGBT20B_999_34 -out "ptest_gpu/" -clobber -GPU
 echo "Python exited"
 date
