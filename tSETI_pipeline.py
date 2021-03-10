@@ -125,7 +125,10 @@ def parse_args():
             indir += "/"
         odict["indir"] = indir
     if odict["out"]:
-        out = odict["out"]
+        if type(odict["out"]) is list:
+            out = odict["out"][0]
+        else:
+            out = odict["out"]
         if out[-1] != "/":
             out += "/"
         if out[0] == "/":
@@ -361,7 +364,7 @@ def main():
     # deal with GPU stuff and set output directory either way
     if gpu_backend:
         import cupy
-        outdir = indir + outdir + "_gpu/"
+        outdir = indir + outdir #+ "_gpu/"
     else:
         outdir = indir + outdir
     # make the "processed" directory if it doesn't already exist
@@ -401,15 +404,15 @@ def main():
         print(f"Using a drift rate range between {min_drift_rate:.2f} and {max_drift_rate:.2f}.")
 
         # run turbo_seti
-        start = time.time()
+        start1 = time.time()
         datfile = run_turbo_seti(h5_file,
                                  min_snr=min_SNR,
                                  outdir=outdir,
                                  clobber=clobber,
                                  max_drift=max_drift_rate,
                                  gpu_backend=gpu_backend)
-        end = time.time()
-        print(end - start)
+        end1 = time.time()
+        print("michael timing:" + str(end1 - start1))
         print('\n')
 
         # workaround for broken min drift rate
